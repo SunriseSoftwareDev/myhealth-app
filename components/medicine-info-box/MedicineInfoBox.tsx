@@ -10,6 +10,7 @@ const MedicineInfoBox = () => {
       <View style={styles.nameAndDosageContainer}>
         <Text style={styles.nameText}>Levothyroxine</Text>
         <Text style={styles.dosageText}>175mg</Text>
+        <Text style={styles.dosageText}>Take 2 by mouth daily</Text>
       </View>
     </View>
   );
@@ -17,27 +18,29 @@ const MedicineInfoBox = () => {
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 25,
-    height: 200,
-    width: 200,
+    display: "flex",
+    flexDirection: "row",
+    height: 100,
     shadowColor: "black",
     shadowOffset: { width: -2, height: 4 },
     shadowOpacity: 0.5,
-    shadowRadius: 10,
+    shadowRadius: 5,
+    marginVertical: 10,
+    borderRadius: 25,
   },
   fakeImageContainer: {
     backgroundColor: "gray",
-    flex: 3,
+    flex: 1,
     borderTopLeftRadius: 25,
-    borderTopRightRadius: 25,
+    borderBottomLeftRadius: 25,
   },
   nameAndDosageContainer: {
-    flex: 1,
-    padding: 5,
-    borderBottomLeftRadius: 25,
+    flex: 2,
+    padding: 10,
+    borderTopRightRadius: 25,
     borderBottomRightRadius: 25,
   },
-  nameText: { fontWeight: "500" },
+  nameText: { fontWeight: "500", fontSize: 20 },
   dosageText: { color: "gray" },
   addNew: {},
 });
